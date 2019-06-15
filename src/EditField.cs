@@ -13,12 +13,14 @@ namespace CustomMetroForms
     public partial class EditField : UserControl
     {
         public event EventHandler TextBoxTextChanged;
+        public event EventHandler EnterKeyPressed;
         private Color bgColor = Color.White;
         public EditField()
         {
             InitializeComponent();
             advancedImageButton1.OnClickEvent += AdvancedImageButton1_Click;
-            advancedTextBox1.TextBoxTextChanged += AdvancedtextBox1_TextChanged;
+            advancedTextBox1.TextBoxTextChanged += AdvancedTextBox1_TextChanged;
+            advancedTextBox1.EnterKeyPressed += AdvancedTextBox1_EnterKeyPressed;
             OnResized();
         }
 
@@ -149,16 +151,32 @@ namespace CustomMetroForms
         private void AdvancedImageButton1_Click(object sender, EventArgs e)
         {
             advancedTextBox1.TextValue = "";
+            ShowDefaultValue();
             OnResized();
         }
 
-        private void AdvancedtextBox1_TextChanged(object sender, EventArgs e)
+        private void AdvancedTextBox1_TextChanged(object sender, EventArgs e)
         {
             OnTextChange(e);
         }
+        
         protected virtual void OnTextChange(EventArgs e)
         {
             TextBoxTextChanged?.Invoke(this, e);
+        }
+
+        private void AdvancedTextBox1_EnterKeyPressed(object sender, EventArgs e)
+        {
+            OnEnterKeyPressed(e);
+        }
+
+        protected virtual void OnEnterKeyPressed(EventArgs e)
+        {
+            EnterKeyPressed?.Invoke(this, e);
+        }
+        public void ShowDefaultValue()
+        {
+            advancedTextBox1.ShowDefaultValue();
         }
     }
 }

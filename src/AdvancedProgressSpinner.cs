@@ -1,4 +1,5 @@
-﻿// Copyright (c) 2009, Yves Goergen, http://unclassified.de
+﻿// Copyright (c) 2019, Frederik Höft https://github.com/Th3-Fr3d
+// Modification for MetroFramework (c) 2009, Yves Goergen, http://unclassified.de
 // Modification for MetroFramework (c) 2011, Sven Walter http://github.com/viperneo
 // All rights reserved.
 //

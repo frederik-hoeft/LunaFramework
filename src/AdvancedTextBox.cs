@@ -35,6 +35,7 @@ namespace CustomMetroForms
         private Boolean isEmpty = false;
         private Boolean useDefaultValue = true;
         public event EventHandler TextBoxTextChanged;
+        public event EventHandler EnterKeyPressed;
         public AdvancedTextBox()
         {
             InitializeComponent();
@@ -205,6 +206,11 @@ namespace CustomMetroForms
             this.Invalidate();
         }
 
+        public void ShowDefaultValue()
+        {
+            OnFocusLost(null, null);
+        }
+
         private void AnimationTick(object sender, EventArgs e)
         {
             if (IsFocused)
@@ -244,6 +250,17 @@ namespace CustomMetroForms
         protected virtual void OnTextChange(EventArgs e)
         {
             TextBoxTextChanged?.Invoke(this, e);
+        }
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OnEnterKeyPressed(e);
+            }
+        }
+        protected virtual void OnEnterKeyPressed(EventArgs e)
+        {
+            EnterKeyPressed?.Invoke(this, e);
         }
     }
 }
