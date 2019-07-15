@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Imaging;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
 
     public partial class AdvancedTextBox : UserControl

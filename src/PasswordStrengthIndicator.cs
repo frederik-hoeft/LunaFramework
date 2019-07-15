@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     /// <summary>
     /// Used to indicate the strength of a password.
@@ -27,7 +27,6 @@ namespace CustomMetroForms
         private Color _nextColor = Color.Orange;
         private int astep, rstep, gstep, bstep;
         private readonly int steps = 20;
-        private readonly int step = 0;
         private int _animationInterval = 20;
         private bool timerRunning = false;
         private bool progress = false;

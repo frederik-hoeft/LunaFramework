@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Forms.VisualStyles;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public partial class AdvancedRichTextBox : UserControl
     {

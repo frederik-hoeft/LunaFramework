@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public static class ColorExtensions
     {

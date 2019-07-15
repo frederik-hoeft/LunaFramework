@@ -1,4 +1,4 @@
-﻿namespace CustomMetroForms
+﻿namespace LunaForms
 {
     partial class Advanced2FAPrompt
     {
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.advancedImageButton1 = new CustomMetroForms.AdvancedImageButton();
+            this.advancedImageButton1 = new LunaForms.AdvancedImageButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.advancedTextBox1 = new CustomMetroForms.AdvancedTextBox();
+            this.advancedTextBox1 = new LunaForms.AdvancedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();

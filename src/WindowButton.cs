@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public partial class WindowButton : UserControl
     {
@@ -18,7 +18,6 @@ namespace CustomMetroForms
         private Color HoverColor;
         private Color CurrentColor;
         private int steps = 20;
-        private int step = 0;
         private int _AnimationInterval = 10;
         public event EventHandler OnClickEvent;
         private Timer AnimationTimer = new Timer();
@@ -193,7 +192,7 @@ namespace CustomMetroForms
                     timerRunning = false;
                 }
             }
-            this.Invalidate();
+            this.Refresh();
         }
 
         private void MouseEnterEvent()

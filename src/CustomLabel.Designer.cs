@@ -1,4 +1,4 @@
-﻿namespace CustomMetroForms
+﻿namespace LunaForms
 {
     partial class CustomLabel
     {

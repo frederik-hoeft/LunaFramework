@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public partial class CustomLabel : UserControl
     {
@@ -16,13 +16,35 @@ namespace CustomMetroForms
         {
             InitializeComponent();
         }
-        public String Header
+        private Color backColor = Color.White;
+        public override Color BackColor
+        {
+            get => base.BackColor;
+            set
+            {
+                base.BackColor = value;
+                backColor = value;
+                SetBackColor(this);
+            }
+        }
+
+        private void SetBackColor(Control control)
+        {
+            control.BackColor = backColor;
+            ControlCollection childControls = control.Controls;
+            for (int i = 0; i < childControls.Count; i++)
+            {
+                SetBackColor(childControls[i]);
+            }
+        }
+
+        public string Header
         {
             get { return LabelHeader.Text; }
             set { LabelHeader.Text = value; }
         }
 
-        public String Content
+        public string Content
         {
             get { return RichLabel.Text; }
             set { RichLabel.Text = value; }

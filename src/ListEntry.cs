@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public partial class ListEntry : UserControl
     {

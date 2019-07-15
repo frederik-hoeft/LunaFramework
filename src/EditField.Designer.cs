@@ -1,4 +1,4 @@
-﻿namespace CustomMetroForms
+﻿namespace LunaForms
 {
     partial class EditField
     {
@@ -30,9 +30,9 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.advancedTextBox1 = new CustomMetroForms.AdvancedTextBox();
+            this.advancedTextBox1 = new LunaForms.AdvancedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.advancedImageButton1 = new CustomMetroForms.AdvancedImageButton();
+            this.advancedImageButton1 = new LunaForms.AdvancedImageButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();

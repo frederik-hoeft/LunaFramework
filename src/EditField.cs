@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomMetroForms
+namespace LunaForms
 {
     public partial class EditField : UserControl
     {
