@@ -1,4 +1,4 @@
-﻿namespace pmdbs
+﻿namespace LunaForms
 {
     partial class LunaItemList
     {
@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lunaScrollBar1 = new pmdbs.LunaScrollBar();
+            this.lunaScrollBar1 = new LunaForms.LunaScrollBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.lunaScrollBar1.Minimum = 0;
             this.lunaScrollBar1.MouseWheelBarPartitions = 10;
             this.lunaScrollBar1.Name = "lunaScrollBar1";
-            this.lunaScrollBar1.Orientation = pmdbs.LunaScrollBar.LunaScrollOrientation.Vertical;
+            this.lunaScrollBar1.Orientation = LunaForms.LunaScrollBar.LunaScrollOrientation.Vertical;
             this.lunaScrollBar1.ScrollbarSize = 20;
             this.lunaScrollBar1.Size = new System.Drawing.Size(20, 612);
             this.lunaScrollBar1.TabIndex = 2;

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Forms.Design;
 
-namespace pmdbs
+namespace LunaForms
 {
     public partial class LunaTextPanel : UserControl
     {

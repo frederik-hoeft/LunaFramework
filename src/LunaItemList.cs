@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LunaForms;
 using System.Runtime.InteropServices;
 
-namespace pmdbs
+namespace LunaForms
 {
     [Description("A scrollable list of LunaItems each containing an image, a header and an optional info text.")]
     public partial class LunaItemList : UserControl

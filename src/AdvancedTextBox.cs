@@ -143,19 +143,24 @@ namespace LunaForms
         #endregion
         private void AdvancedTextBox_Paint(object sender, PaintEventArgs e)
         {
-            Bitmap B = new Bitmap(Width, Height);
-            Graphics G = Graphics.FromImage(B);
-            G.Clear(Color.Transparent);
-
-            G.DrawLine(new Pen(new SolidBrush(NormalColor)), new Point(0, Height - 2), new Point(Width, Height - 2));
-            if (this.Enabled)
+            using (Bitmap B = new Bitmap(Width, Height))
+            using (Graphics G = Graphics.FromImage(B))
             {
-                G.FillRectangle(new SolidBrush(ColorFocus), PointAnimation, (float)Height - 3, SizeAnimation, 2);
+                G.Clear(Color.Transparent);
+                using (Brush brush = new SolidBrush(NormalColor))
+                using (Pen pen = new Pen(brush))
+                {
+                    G.DrawLine(pen, new Point(0, Height - 2), new Point(Width, Height - 2));
+                }
+                if (this.Enabled)
+                {
+                    using (Brush brush = new SolidBrush(ColorFocus))
+                    {
+                        G.FillRectangle(brush, PointAnimation, (float)Height - 3, SizeAnimation, 2);
+                    }
+                }
+                e.Graphics.DrawImage((Image)(B.Clone()), 0, 0);
             }
-
-            e.Graphics.DrawImage((Image)(B.Clone()), 0, 0);
-            G.Dispose();
-            B.Dispose();
         }
 
         private void textBox1_SizeChanged(object sender, EventArgs e)

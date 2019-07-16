@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Windows.Forms;
 
-namespace pmdbs
+namespace LunaForms
 {
     [DefaultEvent("Scroll")]
     [DefaultProperty("Value")]
