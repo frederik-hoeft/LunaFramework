@@ -832,17 +832,16 @@ namespace LunaForms
         public void RemoveAll()
         {
             _items = new List<LunaItem>();
-            int count = flowLayoutPanel1.Controls.Count;
+            int count = controls.Count;
             flowLayoutPanel1.Controls.Clear();
-            for (int i = count - 1; i >= 0; i--)
+            for (int i = 0; i < count; i++)
             {
-                Control control = controls[i];
-                if (control is LunaItem item)
+                if (controls[i] is LunaItem item)
                 {
                     item.MouseEnter -= LunaItem_MouseEnter;
                     item.OnClickEvent -= Control_clicked;
                 }
-                control.Dispose();
+                controls[i].Dispose();
             }
             controls = new List<Control>();
         }

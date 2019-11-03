@@ -605,16 +605,26 @@ namespace LunaForms
         /// <summary>
         /// Removes the LunaSmallCard at the specified index.
         /// </summary>
-        /// <param name="index">The inted to remove the LunaSmallCard at.</param>
+        /// <param name="index">The index to remove the LunaSmallCard at.</param>
         public void RemoveAt(int index)
         {
             _items.RemoveAt(index);
+            index *= 2;
+            int count = controls.Count;
             Controls.RemoveAt(index);
             controls[index].Dispose();
-            if (index < 0)
+            if (count > 1)
             {
-                Controls.RemoveAt(index - 1);
-                controls[index - 1].Dispose();
+                if (index == 0)
+                {
+                    Controls.RemoveAt(0);
+                    controls[0].Dispose();
+                }
+                else
+                {
+                    Controls.RemoveAt(index - 1);
+                    controls[index - 1].Dispose();
+                }
             }
         }
 
@@ -624,10 +634,14 @@ namespace LunaForms
         public void RemoveAll()
         {
             _items = new List<LunaSmallCardItem>();
-            int count = Controls.Count;
+            Controls.Clear();
+            int count = controls.Count;
             for (int i = 0; i < count; i++)
             {
-                Controls.RemoveAt(i);
+                if (controls[i] is LunaSmallCardItem item)
+                {
+                    item.OnClickEvent -= Control_clicked;
+                }
                 controls[i].Dispose();
             }
             controls = new List<Control>();

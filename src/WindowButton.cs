@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace LunaForms
 {
+    [DefaultEvent("OnClickEvent")]
     public partial class WindowButton : UserControl
     {
         private Image NormalImage;
